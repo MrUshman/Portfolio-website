@@ -1,26 +1,33 @@
+# Netlify CMS Configuration
 backend:
   name: git-gateway
-  branch: master
+  branch: master # or main, depending on your repo
 
+# Media files will be stored in the repo under assets/images
 media_folder: "assets/images/blog"
 public_folder: "/assets/images/blog"
 
+# Optional: Logo for the CMS
+# logo_url: /assets/images/logo.png
+
 collections:
+  # Blog Posts Collection
   - name: "blog"
     label: "Blog Posts"
     folder: "content/blog"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
-      - { label: "Excerpt", name: "excerpt", widget: "text", required: true }
-      - { label: "Tags", name: "tags", widget: "list", default: ["Technology"] }
-      - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Author", name: "author", widget: "string", default: "Prashant Baral" }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Published", name: "published", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown" }
 
+  # Projects Collection
   - name: "projects"
     label: "Projects"
     folder: "content/projects"
@@ -29,10 +36,10 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Technologies", name: "technologies", widget: "list" }
-      - { label: "Live Demo URL", name: "demo_url", widget: "string", required: false }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Demo URL", name: "demo_url", widget: "string", required: false }
       - { label: "GitHub URL", name: "github_url", widget: "string", required: false }
-      - { label: "Project Details", name: "body", widget: "markdown" }
       - { label: "Featured", name: "featured", widget: "boolean", default: false }
       - { label: "Order", name: "order", widget: "number", default: 0 }
+      - { label: "Body", name: "body", widget: "markdown" }
