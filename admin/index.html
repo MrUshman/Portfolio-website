@@ -245,15 +245,12 @@
                 }
             });
 
-            netlifyIdentity.on("login", user => {
-                console.log('Login successful:', user.email);
-                hideError();
-                showSuccess('Login successful! Loading CMS...');
-
-                // Reload the page to initialize CMS with authenticated user
-                setTimeout(() => {
-                    window.location.reload();
-                }, 1000);
+            netlifyIdentity.on("init", user => {
+                if (!user) {
+                    netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
             });
 
             netlifyIdentity.on("logout", () => {
