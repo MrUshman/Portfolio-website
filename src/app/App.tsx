@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { LandingIntro } from './components/LandingIntro';
 import { TerminalAnimation } from './components/TerminalAnimation';
 import { Header } from './components/Header';
