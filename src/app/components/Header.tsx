@@ -1,31 +1,25 @@
-import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { Github, Linkedin, Mail } from 'lucide-react';
+
+interface HeaderProps {
+  currentPage: string;
+  onNavigate: (page: string) => void;
+}
 
 const menuItems = [
-  { name: 'Home', href: '#home' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Blog', href: '#blog' },
-  { name: 'About', href: '#about' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', id: 'home' },
+  { name: 'Projects', id: 'projects' },
+  { name: 'Blog', id: 'blog' },
+  { name: 'About', id: 'about' },
+  { name: 'Contact', id: 'contact' },
 ];
 
-export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+export function Header({ currentPage, onNavigate }: HeaderProps) {
   return (
     <header className="w-full border-b border-gray-200 bg-white">
       <div className="max-w-[1600px] mx-auto px-8 py-3">
         <div className="flex items-center justify-between">
-          {/* Left: Hamburger + Profile */}
-          <div className="flex items-center gap-4">
-            {/* Hamburger Menu */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="w-9 h-9 rounded-lg border border-gray-300 hover:border-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center"
-            >
-              {isMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-            </button>
-
+          {/* Left: Profile + Navigation */}
+          <div className="flex items-center gap-8">
             {/* Profile */}
             <div className="flex items-center gap-3">
               <img
@@ -38,6 +32,23 @@ export function Header() {
                 <p className="text-gray-500 text-xs">ML Engineer • Data Scientist</p>
               </div>
             </div>
+
+            {/* Navigation - Always Visible */}
+            <nav className="flex gap-6">
+              {menuItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => onNavigate(item.id)}
+                  className={`text-sm transition-all ${
+                    currentPage === item.id
+                      ? 'text-black underline decoration-[#FF6B6B] decoration-2 underline-offset-4'
+                      : 'text-gray-600 hover:text-black hover:underline hover:decoration-[#FF6B6B] hover:decoration-2 hover:underline-offset-4'
+                  }`}
+                >
+                  {item.name}
+                </button>
+              ))}
+            </nav>
           </div>
 
           {/* Right: Quick Links */}
@@ -64,30 +75,9 @@ export function Header() {
             >
               <Mail className="w-4 h-4" />
             </a>
-            <span className="ml-2 px-2 py-0.5 bg-black text-white rounded text-xs">BETA</span>
           </div>
         </div>
       </div>
-
-      {/* Dropdown Menu */}
-      {isMenuOpen && (
-        <div className="border-t border-gray-200 bg-white">
-          <div className="max-w-[1600px] mx-auto px-8 py-3">
-            <nav className="flex gap-6">
-              {menuItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-sm text-gray-600 hover:text-black hover:underline hover:decoration-[#FF6B6B] hover:decoration-2 hover:underline-offset-4 transition-all"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </nav>
-          </div>
-        </div>
-      )}
     </header>
   );
 }

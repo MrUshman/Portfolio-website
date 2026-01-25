@@ -1,17 +1,48 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { LandingIntro } from './components/LandingIntro';
-import { TerminalAnimation } from './components/TerminalAnimation';
 import { Header } from './components/Header';
-import { SkillsSection } from './components/SkillsSection';
-import { ChatBox } from './components/ChatBox';
-import { JupyterNotebook } from './components/JupyterNotebook';
+import { Home } from './components/pages/Home';
+import { Projects } from './components/pages/Projects';
+import { Blog } from './components/pages/Blog';
+import { About } from './components/pages/About';
+import { Contact } from './components/pages/Contact';
 import { FooterApis } from './components/FooterApis';
 
-type Stage = 'landing' | 'terminal' | 'portfolio';
+type Stage = 'landing' | 'portfolio';
+type Page = 'home' | 'projects' | 'blog' | 'about' | 'contact';
 
 export default function App() {
   const [stage, setStage] = useState<Stage>('landing');
+  const [currentPage, setCurrentPage] = useState<Page>('home');
+
+  // Auto-transition after 5 seconds
+  useEffect(() => {
+    if (stage === 'landing') {
+      const timer = setTimeout(() => {
+        setStage('portfolio');
+      }, 5000); // 5 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [stage]);
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return <Home />;
+      case 'projects':
+        return <Projects />;
+      case 'blog':
+        return <Blog />;
+      case 'about':
+        return <About />;
+      case 'contact':
+        return <Contact />;
+      default:
+        return <Home />;
+    }
+  };
 
   return (
     <>
@@ -26,20 +57,7 @@ export default function App() {
             }}
             transition={{ duration: 0.8 }}
           >
-            <LandingIntro onExplore={() => setStage('terminal')} />
-          </motion.div>
-        )}
-
-        {stage === 'terminal' && (
-          <motion.div
-            key="terminal"
-            exit={{ 
-              y: -100,
-              opacity: 0,
-              transition: { duration: 0.6 }
-            }}
-          >
-            <TerminalAnimation onComplete={() => setStage('portfolio')} />
+            <LandingIntro onExplore={() => setStage('portfolio')} />
           </motion.div>
         )}
 
@@ -51,32 +69,13 @@ export default function App() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="h-screen bg-white flex flex-col overflow-hidden"
           >
-            {/* Minimal Header */}
-            <Header />
+            {/* Header with Navigation */}
+            <Header currentPage={currentPage} onNavigate={(page) => setCurrentPage(page as Page)} />
 
-            {/* Main Content - Three Column Layout - Takes most space */}
-            <main className="flex-1 overflow-hidden">
-              <div className="max-w-[1600px] mx-auto h-full px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 py-8 h-full">
-                  {/* Left Column - Skills */}
-                  <div className="lg:col-span-3 overflow-hidden">
-                    <SkillsSection />
-                  </div>
+            {/* Main Content - Pages */}
+            {renderPage()}
 
-                  {/* Center Column - ChatBox (wider) */}
-                  <div className="lg:col-span-6 overflow-hidden">
-                    <ChatBox />
-                  </div>
-
-                  {/* Right Column - Jupyter Notebook */}
-                  <div className="lg:col-span-3 overflow-hidden">
-                    <JupyterNotebook />
-                  </div>
-                </div>
-              </div>
-            </main>
-
-            {/* Compact Footer */}
+            {/* Footer */}
             <FooterApis />
           </motion.div>
         )}
