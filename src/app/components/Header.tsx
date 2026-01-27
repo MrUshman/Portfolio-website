@@ -23,13 +23,13 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
             {/* Profile */}
             <div className="flex items-center gap-3">
               <img
-                src="https://images.unsplash.com/photo-1620216464663-29984da34a12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjY2MTk3NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="/images/profile/PrashantBaral.jpeg"
                 alt="Developer"
                 className="w-10 h-10 rounded-full object-cover border-2 border-black"
               />
               <div>
                 <h1 className="text-lg">Prashant Baral</h1>
-                <p className="text-gray-500 text-xs">ML Engineer • Data Scientist</p>
+                <p className="text-gray-500 text-xs">Data Science • ML Aspirant</p>
               </div>
             </div>
 
@@ -39,11 +39,10 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                 <button
                   key={item.id}
                   onClick={() => onNavigate(item.id)}
-                  className={`text-sm transition-all ${
-                    currentPage === item.id
-                      ? 'text-black underline decoration-[#FF6B6B] decoration-2 underline-offset-4'
-                      : 'text-gray-600 hover:text-black hover:underline hover:decoration-[#FF6B6B] hover:decoration-2 hover:underline-offset-4'
-                  }`}
+                  className={`text-sm transition-all ${currentPage === item.id
+                    ? 'text-black underline decoration-[#FF6B6B] decoration-2 underline-offset-4'
+                    : 'text-gray-600 hover:text-black hover:underline hover:decoration-[#FF6B6B] hover:decoration-2 hover:underline-offset-4'
+                    }`}
                 >
                   {item.name}
                 </button>
@@ -54,7 +53,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
           {/* Right: Quick Links */}
           <div className="flex items-center gap-3">
             <a
-              href="https://github.com"
+              href="https://github.com/prashant-baral"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full border border-gray-300 hover:border-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center"
@@ -62,15 +61,15 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
               <Github className="w-4 h-4" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/prashantbaral1/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded-full border border-gray-300 hover:border-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center"
+              className="relative z-50 w-8 h-8 rounded-full border border-gray-300 hover:border-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center"
             >
-              <Linkedin className="w-4 h-4" />
+              <Linkedin className="w-4 h-4 pointer-events-none" />
             </a>
             <a
-              href="mailto:hello@nepkal.dev"
+              href="mailto:baralprashant09@gmail.com"
               className="w-8 h-8 rounded-full border border-[#FF6B6B] text-[#FF6B6B] hover:bg-[#FF6B6B] hover:text-white transition-all duration-300 flex items-center justify-center"
             >
               <Mail className="w-4 h-4" />
