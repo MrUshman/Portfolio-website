@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { BarChart3 } from 'lucide-react';
 
 export function FooterApis() {
   const [time, setTime] = useState(new Date());
@@ -24,16 +25,31 @@ export function FooterApis() {
             <span>All systems operational</span>
           </div>
 
-          {/* Right: Time */}
-          <div className="flex items-center gap-2">
-            <span>
-              {time.toLocaleTimeString('en-US', {
-                hour: '2-digit',
-                minute: '2-digit',
-                hour12: false,
-              })}
-            </span>
-            <span className="text-xs text-gray-400">NPT</span>
+          {/* Right: Time + Analytics */}
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
+              <span>
+                {time.toLocaleTimeString('en-US', {
+                  hour: '2-digit',
+                  minute: '2-digit',
+                  hour12: false,
+                })}
+              </span>
+              <span className="text-xs text-gray-400">NPT</span>
+            </div>
+
+            {/* Analytics Icon */}
+            <a
+              href="https://cloud.umami.is/analytics/eu/share/w3OTIP9hQIi0PNfT"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group w-6 h-6 rounded-full border border-gray-300 hover:border-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center"
+            >
+              <BarChart3 className="w-3.5 h-3.5" />
+              <span className="absolute bottom-full right-0 mb-2 px-2 py-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                Analytics
+              </span>
+            </a>
           </div>
         </div>
       </div>

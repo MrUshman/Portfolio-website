@@ -74,7 +74,7 @@ const blogPosts: BlogPost[] = [
     date: '2026-01-15',
     readTime: '8 min read',
     tags: ['Python', 'Pandas', 'Scikit-learn', 'Feature Engineering'],
-    link: "#"
+
   },
   {
     title: 'Building REST APIs with FastAPI',
