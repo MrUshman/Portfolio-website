@@ -16,7 +16,7 @@ export function FooterApis() {
         <div className="flex items-center justify-between text-sm text-gray-500">
           {/* Left: Copyright */}
           <div>
-            © {new Date().getFullYear()} Prashant Baral
+            © {new Date().getFullYear()} Ushman Khan
           </div>
 
           {/* Center: Status */}

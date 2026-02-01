@@ -35,8 +35,8 @@ export function Home({ onNavigate }: { onNavigate?: (page: string) => void }) {
                 <div className="relative w-64 h-64 rounded-full overflow-hidden border-8 border-white shadow-2xl">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#FF6B6B]/10 to-transparent"></div>
                   <ImageWithFallback
-                    src="/images/profile/PrashantBaral.jpeg"
-                    alt="Prashant Baral"
+                    src="/images/profile/UshmanKhan.jpg"
+                    alt="Ushman Khan"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -57,19 +57,16 @@ export function Home({ onNavigate }: { onNavigate?: (page: string) => void }) {
               </div>
 
               <h1 className="text-5xl lg:text-6xl font-bold mb-3 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                Prashant Baral
+                Ushman Khan
               </h1>
 
               <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                A passionate <span className="text-[#FF6B6B] font-semibold">Data Science and ML learner</span> from
-                <span className="font-semibold">  Pokhara, Nepal 🇳🇵</span>
+                A passionate <span className="text-[#FF6B6B] font-semibold">Full Stack Engineering Student</span> from
+                <span className="font-semibold">  Bhairahawa, Nepal 🇳🇵</span>
               </p>
 
               <p className="text-base text-gray-600 mb-8 leading-relaxed">
-                I work with data to turn messy, real-world problems into clear,
-                usable insights. My focus is on data analysis, machine learning,
-                and building systems that are practical, explainable, and reliable.
-                I love bringing ideas to life through code and creativity.
+                I build scalable, high-performance web applications using the MERN stack and AI integration. I specialize in turning complex requirements into responsive, production-ready systems with a focus on optimization and user-centric design. I am dedicated to writing clean, efficient code that delivers measurable real-world impact.
               </p>
 
               <button

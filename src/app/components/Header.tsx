@@ -23,13 +23,13 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
             {/* Profile */}
             <div className="flex items-center gap-3">
               <img
-                src="/images/profile/PrashantBaral.jpeg"
+                src="/images/profile/UshmanKhan.jpg"
                 alt="Developer"
                 className="w-10 h-10 rounded-full object-cover border-2 border-black"
               />
               <div>
-                <h1 className="text-lg">Prashant Baral</h1>
-                <p className="text-gray-500 text-xs">Data Science • ML Aspirant</p>
+                <h1 className="text-lg">Ushman Khan</h1>
+                <p className="text-gray-500 text-xs">FrontEnd • BackEnd Developer</p>
               </div>
             </div>
 
@@ -53,7 +53,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
           {/* Right: Quick Links */}
           <div className="flex items-center gap-3">
             <a
-              href="https://github.com/prashant-baral"
+              href="https://github.com/MrUshman"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full border border-gray-300 hover:border-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center"
@@ -61,7 +61,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
               <Github className="w-4 h-4" />
             </a>
             <a
-              href="https://www.linkedin.com/in/prashantbaral1/"
+              href="https://www.linkedin.com/in/ushman-khan-233633266/"
               target="_blank"
               rel="noopener noreferrer"
               className="relative z-50 w-8 h-8 rounded-full border border-gray-300 hover:border-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center"
@@ -69,7 +69,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
               <Linkedin className="w-4 h-4 pointer-events-none" />
             </a>
             <a
-              href="mailto:baralprashant09@gmail.com"
+              href="mailto:khanusmann223@gmail.com"
               className="w-8 h-8 rounded-full border border-[#FF6B6B] text-[#FF6B6B] hover:bg-[#FF6B6B] hover:text-white transition-all duration-300 flex items-center justify-center"
             >
               <Mail className="w-4 h-4" />
