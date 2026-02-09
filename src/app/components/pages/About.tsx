@@ -18,21 +18,22 @@ const tagColors: Record<string, string> = {
   Cpp: "bg-blue-100 text-blue-700",
   SQL: "bg-blue-100 text-blue-700",
   Java: "bg-blue-100 text-blue-700",
+  Javascript: "bg-yellow-100 text-yellow-700",
+  PHP: "bg-indigo-100 text-indigo-700",
 
-  NumPy: "bg-amber-100 text-amber-700",
-  Excel: "bg-rose-100 text-rose-700",
-  "Scikit-learn": "bg-orange-100 text-orange-700",
-  Matplotlib: "bg-amber-100 text-amber-700",
-  Pandas: "bg-orange-100 text-orange-700",
-  "Power BI": "bg-red-100 text-red-700",
-  "Apache Hadoop": "bg-orange-100 text-orange-700",
+  React: "bg-cyan-100 text-cyan-700",
+  "Next.js": "bg-gray-100 text-gray-700",
+  Tailwind: "bg-sky-100 text-sky-700",
+  Redux: "bg-purple-100 text-purple-700",
+
+  "Node.js": "bg-green-100 text-green-700",
+  Express: "bg-gray-100 text-gray-700",
+  MongoDB: "bg-emerald-100 text-emerald-700",
+  MySQL: "bg-blue-100 text-blue-700",
+  "Socket.io": "bg-slate-100 text-slate-700",
 
   FastAPI: "bg-violet-100 text-violet-700",
   PostgreSQL: "bg-sky-100 text-sky-700",
-  SQLAlchemy: "bg-violet-100 text-violet-700",
-  Alembic: "bg-purple-100 text-purple-700",
-  Pydantic: "bg-violet-100 text-violet-700",
-
   GitHub: "bg-teal-100 text-teal-700",
   Docker: "bg-teal-100 text-teal-700",
   Git: "bg-emerald-100 text-emerald-700",
@@ -53,94 +54,94 @@ type Certificate = {
   verifyLink?: string;
 };
 
-
 const certificates: Certificate[] = [
   {
     id: 1,
     title: "Cloud Computing",
     issuer: "NPTEL",
     date: "Oct 2025",
-    image: "assets/certificates/nptel_cloud.jpg",
+    image: "assets/certificates/NPTEL certificate.jpg",
     color: "from-blue-50 to-white border-blue-200",
   },
   {
     id: 2,
-    title: "FastAPI - The Complete Course 2026 (Beginner + Advanced)",
-    issuer: "Udemy",
-    date: "Nov 2025",
-    image: "assets/certificates/fastapi.jpg",
+    title: "The bits and Bytes of Computer Networking",
+    issuer: "Coursera",
+    date: "Sep-13 2024",
+    image: "assets/certificates/bit and bytes.png",
     color: "from-violet-50 to-white border-violet-200",
-    verifyLink: "https://www.udemy.com/certificate/UC-47a8e984-053d-4af1-b646-31407294171d/",
+    verifyLink: "https://coursera.org/verify/FLT1SWMI2DG2 ",
   },
   {
     id: 3,
-    title: "Full Stack with AI Agents",
-    issuer: "Angaar+3 2025 (W3grads)",
-    date: "Jul 2025",
-    image: "assets/certificates/summer_training.jpg",
+    title: "Computer Programming",
+    issuer: "LPU",
+    date: "March-16 2024",
+    image: "assets/certificates/C Programming.png",
     color: "from-green-50 to-white border-green-200",
   },
   {
     id: 4,
-    title: "Packet Switching Networks and Algorithms",
-    issuer: "University of Colorado System (Coursera)",
-    date: "Oct 2024",
+    title: "Community services",
+    issuer: "Green Youth Of Lumbini",
+    date: "July-20 2024",
     image: "assets/certificates/Coursera AY3AT4TWPREX.jpg",
     color: "from-blue-50 to-white border-blue-200",
-    verifyLink: "https://coursera.org/verify/AY3AT4TWPREX",
   },
   {
     id: 5,
     title: "Peer-to-Peer Protocols and Local Area Networks",
     issuer: "University of Colorado System (Coursera)",
     date: "Oct 2024",
-    image: "assets/certificates/Coursera JQ7RROWZ29KF.jpg",
+    image: "assets/certificates/Peer To Peer.png",
     color: "from-blue-50 to-white border-blue-200",
-    verifyLink: "https://coursera.org/verify/JQ7RROWZ29KF",
+    verifyLink: "https://coursera.org/verify/HVN9H9LRTU9M ",
   },
   {
     id: 6,
-    title: "Digital Systems: From Logic Gates to Processors",
-    issuer: "Universitat Autònoma de Barcelona (Coursera)",
-    date: "Oct 2024",
-    image: "assets/certificates/Coursera EQO54M75QKY0.jpg",
+    title: "Java programming",
+    issuer: "Lovely professional university",
+    date: "May-05 2025",
+    image: "assets/certificates/Java Programming.png",
     color: "from-blue-50 to-white border-blue-200",
-    verifyLink: "https://coursera.org/verify/EQO54M75QKY0",
+    verifyLink: "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2BpjzxvmPbL5ga91FNrAK4LxxqusP%2F1IBg%3D",
   },
   {
     id: 7,
     title: "Introduction to Hardware and Operating Systems",
     issuer: "IBM (Coursera)",
     date: "Sep 2024",
-    image: "assets/certificates/Coursera CP3VGU4VH70Z-1.png",
+    image: "assets/certificates/Introduction to hardware.png",
     color: "from-blue-50 to-white border-blue-200",
-    verifyLink: "https://coursera.org/verify/CP3VGU4VH70Z",
+    verifyLink: "https://coursera.org/verify/OH5J3ZA6XQWP",
   },
   {
     id: 8,
     title: "Fundamentals of Network Communication",
     issuer: "University of Colorado System (Coursera)",
     date: "Sep 2024",
-    image: "assets/certificates/Coursera 42RYEK72R5JH-1.png",
+    image: "assets/certificates/Network communication.png",
     color: "from-blue-50 to-white border-blue-200",
-    verifyLink: "https://coursera.org/verify/42RYEK72R5JH",
+    verifyLink: "https://coursera.org/verify/MYNPD0C04TUF",
   },
   {
     id: 9,
-    title: "The Bits and Bytes of Computer Networking",
+    title: "Data Structure And Algorithm",
     issuer: "Google (Coursera)",
-    date: "Sep 2024",
-    image: "assets/certificates/Coursera DS87NRHCWK1V-1.png",
+    date: "Dec-5 2024",
+    image: "assets/certificates/DSA.png",
     color: "from-blue-50 to-white border-blue-200",
-    verifyLink: "https://coursera.org/verify/DS87NRHCWK1V",
+    verifyLink: "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2BsOThPQXtiG4AdqSCoVKIOWwVSVt8mizw%3D",
   },
   {
     id: 10,
-    title: "Unrevealing Basic Python towards ML/AI",
-    issuer: "CSE Pathshala",
+    title: "Object oriented programming",
+    issuer: "Lovely professional University",
     date: "Mar 2024",
-    image: "assets/certificates/CP-20240203-PY439.png",
+    image: "assets/certificates/Cpp.png",
     color: "from-amber-50 to-white border-amber-200",
+    verifyLink: "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2BvCyLRLFSGTwN7fEFNifHu2o6mL1BEaSI%3D",
+  
   },
 ];
 
@@ -162,7 +163,7 @@ export function About() {
           <div className="bg-gradient-to-br from-[#FF6B6B] to-[#ff8787] text-white rounded-xl p-4">
             <MapPin className="w-5 h-5 mb-2 opacity-90" />
             <h3 className="text-xs font-bold mb-0.5">Based In</h3>
-            <p className="text-base">Pokhara,Nepal</p>
+            <p className="text-base">Bhairahwa,Nepal</p>
           </div>
 
           <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl p-4">
@@ -178,7 +179,7 @@ export function About() {
             <h3 className="text-xs font-bold mb-0.5">
               Specialization
             </h3>
-            <p className="text-base">Data Science & ML</p>
+            <p className="text-base">Full Stack Web Development</p>
           </div>
 
           <div className="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-xl p-4">
@@ -196,18 +197,10 @@ export function About() {
               Who I Am
             </h2>
             <p className="text-gray-700 mb-3 text-sm">
-              I'm a data science practitioner focused on
-              extracting value from real-world, messy data.
-              My work centers on data cleaning, exploratory analysis,
-              feature engineering, and building reliable machine
-              learning models using Python and core statistical methods.
+              I’m a full stack web developer focused on building clean, responsive, and user-friendly web applications. My work revolves around creating scalable front-end interfaces and reliable back-end systems using modern web technologies.
             </p>
             <p className="text-gray-700 text-sm">
-              I specialize in data preprocessing,exploratory
-              data analysis, feature engineering,and classical
-              machine learning techniques, with experience
-              building reproducible pipelines and delivering
-              insights through RESTful APIs for real-world use.
+              I have hands-on experience with React, Node.js, Express, and databases like MongoDB and MySQL. I enjoy turning ideas into real products, working on authentication systems, dashboards, and performance-optimized web solutions that solve real-world problems.
             </p>
           </div>
 
@@ -217,19 +210,10 @@ export function About() {
               What Drives Me
             </h2>
             <p className="text-gray-700 mb-3 text-sm">
-              In tech, I'm driven by understanding how things
-              work under the hood, not just using libraries
-              or syntax. I focus on fundamentals—data flow,
-              algorithms, and system behavior—so the solutions
-              I build are explainable, debuggable, and
-              reliable in real-world use.
+              In tech, I’m driven by building things that actually work well in real-world use—not just visually, but functionally. I focus on writing clean code, improving user experience, and understanding how frontend and backend systems connect together.
             </p>
             <p className="text-gray-700 text-sm">
-              Beyond tech, When I'm not building or learning,
-              I'm usually traveling, listening to good music,
-              or hanging out with friends. I enjoy leadership
-              and team environments—they balance things out
-              and shape how I collaborate and communicate.
+              Beyond coding, I enjoy collaborating in team environments, learning new tools, and continuously improving my skills. When I’m not working on projects, I like exploring new ideas, improving my portfolio, and staying curious about how technology can create better digital experiences.
             </p>
           </div>
         </div>
@@ -249,7 +233,7 @@ export function About() {
                 Languages
               </h3>
               <div className="flex flex-wrap gap-1.5">
-                {["Python", "Cpp", "SQL", "Java"].map(
+                {["Python", "Cpp", "SQL", "Java", "PHP", "Javascript"].map(
                   (skill, i) => (
                     <span
                       key={i}
@@ -262,18 +246,19 @@ export function About() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200 rounded-xl p-4 hover:border-purple-500 transition-all duration-300">
-              <h3 className="text-base mb-2 font-bold text-purple-900">
-                DataScience
+            {/* Front-End Box */}
+            <div className="bg-gradient-to-br from-orange-50 to-white border-2 border-orange-200 rounded-xl p-4 hover:border-orange-500 transition-all duration-300">
+              <h3 className="text-base mb-2 font-bold text-orange-900">
+                Front-End
               </h3>
               <div className="flex flex-wrap gap-1.5">
                 {[
-                  "Pandas",
-                  "NumPy",
-                  "Matplotlib",
-                  "Excel",
-                  "Power BI",
-                  "Scikit-learn",
+                  "React",
+                  "Next.js",
+                  "Tailwind",
+                  "Redux",
+                  "HTML5",
+                  "CSS3",
                 ].map((skill, i) => (
                   <span
                     key={i}
@@ -285,17 +270,19 @@ export function About() {
               </div>
             </div>
 
+            {/* Back-End Box */}
             <div className="bg-gradient-to-br from-indigo-50 to-white border-2 border-indigo-200 rounded-xl p-4 hover:border-indigo-500 transition-all duration-300">
               <h3 className="text-base mb-2 font-bold text-indigo-900">
-                Backend
+                Back-End
               </h3>
               <div className="flex flex-wrap gap-1.5">
                 {[
+                  "Node.js",
+                  "Express",
+                  "MongoDB",
+                  "MySQL",
+                  "Socket.io",
                   "FastAPI",
-                  "PostgreSQL",
-                  "Pydantic",
-                  "Alembic",
-                  "SQLAlchemy",
                 ].map((skill, i) => (
                   <span
                     key={i}
@@ -384,8 +371,7 @@ export function About() {
                   LPU,Punjab • 2023 - 2027
                 </p>
                 <p className="text-gray-700 text-sm">
-                  Specializing in Data Science and Machine Learning. Strong foundation in
-                  algorithms, data structures, and building scalable ML solutions.
+                  Specializing in Full Stack Web Development. Strong foundation in frontend and backend technologies, and building scalable, user-focused web applications.
                 </p>
               </div>
             </div>
@@ -399,7 +385,7 @@ export function About() {
                 </h3>
                 <p className="text-blue-600 mb-2 font-mono text-xs flex items-center gap-1.5">
                   <Calendar className="w-3 h-3" />
-                  Sagarmatha School,Pokhara • 2021 - 2023
+                  Sai Global College,Bhairahawa • 2020 - 2022
                 </p>
                 <p className="text-gray-700 text-sm">
                   Science stream with Mathematics and Computer Science.
@@ -416,7 +402,7 @@ export function About() {
                 </h3>
                 <p className="text-blue-600 mb-2 font-mono text-xs flex items-center gap-1.5">
                   <Calendar className="w-3 h-3" />
-                  Tarakunj Secondary School,Pokhara • 2021
+                  Modern Vision Academy,Kanchan-3,Haraiya • 2020
                 </p>
                 <p className="text-gray-700 text-sm">
                   Completed secondary level education.

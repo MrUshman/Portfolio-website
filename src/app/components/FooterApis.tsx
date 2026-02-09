@@ -40,7 +40,7 @@ export function FooterApis() {
 
             {/* Analytics Icon */}
             <a
-              href="https://cloud.umami.is/analytics/eu/share/w3OTIP9hQIi0PNfT"
+              href="https://cloud.umami.is/analytics/eu/websites/704d6558-9476-469b-8a07-c941b55596e6"
               target="_blank"
               rel="noopener noreferrer"
               className="relative group w-6 h-6 rounded-full border border-gray-300 hover:border-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center"

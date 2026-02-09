@@ -1,4 +1,4 @@
-import { Mail, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { useState } from 'react';
 
 export function Contact() {
@@ -109,10 +109,10 @@ export function Contact() {
                 <h3 className="text-base">Email</h3>
               </div>
               <a
-                href="mailto:baralprashant09@gmail.com"
+                href="mailto:khanusmann223@gmail.com"
                 className="text-[#FF6B6B] hover:underline text-sm"
               >
-                baralprashant09@gmail.com
+                khanusmann223@gmail.com
               </a>
             </div>
 
@@ -124,7 +124,7 @@ export function Contact() {
                 </div>
                 <h3 className="text-base">Location</h3>
               </div>
-              <p className="text-gray-600 text-sm">Pokhara, Nepal</p>
+              <p className="text-gray-600 text-sm">Bhairahawa, Nepal</p>
             </div>
 
             {/* Social Links */}
@@ -132,21 +132,23 @@ export function Contact() {
               <h3 className="text-base mb-3">Connect</h3>
               <div className="flex gap-2.5">
                 <a
-                  href="https://github.com/prashant-baral"
+                  href="https://github.com/MrUshman"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 bg-gray-800 text-white rounded-full hover:bg-black transition-all duration-300 flex items-center justify-center"
                 >
                   <Github className="w-4 h-4" />
                 </a>
+
                 <a
-                  href="https://www.linkedin.com/in/prashantbaral1/"
+                  href="https://www.linkedin.com/in/ushman-khan"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 flex items-center justify-center"
                 >
                   <Linkedin className="w-4 h-4" />
                 </a>
+
                 <a
                   href="https://twitter.com"
                   target="_blank"
@@ -154,6 +156,15 @@ export function Contact() {
                   className="w-9 h-9 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition-all duration-300 flex items-center justify-center"
                 >
                   <Twitter className="w-4 h-4" />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/khanusman41"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  <Instagram className="w-4 h-4" />
                 </a>
               </div>
             </div>

@@ -125,7 +125,7 @@ export function Projects() {
         <div className="mb-10">
           <h1 className="text-4xl mb-3">Projects</h1>
           <p className="text-gray-600 text-base">
-            A selection of data science and ML projects built end-to-end.
+            A selection of data Frontend And Backend projects built end-to-end.
           </p>
         </div>
 
