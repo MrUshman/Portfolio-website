@@ -63,11 +63,11 @@ type Project = {
 /* Data  */
 const projects: Project[] = [
   {
-    title: 'Ames Housing Price Prediction',
-    description: 'Housing price prediction model focused on comprehensive data preprocessing including handling missing values, feature encoding, scaling, and feature engineering techniques.',
+    title: 'Money Tracking Website',
+    description: 'You can manage your daily expenses and incomes through this website and also track daily records and monthly records',
     tags: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib'],
-    demo: "https://www.kaggle.com/code/prashantbrl/ames-house-predcition-final",
-    dataset: "https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques"
+    demo: "https://grasus223-bot.github.io/Money-Track-Web/",
+    github: "https://github.com/grasus223-bot/Money-Track-Web"
 
   },
   {
